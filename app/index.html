@@ -6,15 +6,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MNTN</title>
+  <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
   <!-- <link rel="stylesheet" type="text/css" href="/node_modules/slick-carousel/slick/slick.css"/>
   <link rel="stylesheet" type="text/css" href="/node_modules/slick-carousel/slick/slick-theme.css"/> -->
 </head>
 
 <body>
   <header class="header">
+    <div class="header__container">
+      <div class="header__logo">
+        <img src="./img/Logo.svg" alt="">
+      </div>
+      <nav class="header-menu" role="navigation">
+        <ul class="header-menu__list">
+          <li class="header-menu__item"><a href="/#!">Equipment</a></li>
+          <li class="header-menu__item"><a href="/#!">About us</a></li>
+          <li class="header-menu__item"><a href="/#!">Blog</a></li>
+        </ul>
+      </nav>
+
+      <a class="mobile-menu-toggle js-toggle-menu hamburger-menu" href="#">
+        <span class="menu-item"></span>
+        <span class="menu-item"></span>
+        <span class="menu-item"></span>
+      </a>
+    </div>
+  </header>
+  <!-- <header class="header">
     <div class="header__container">
       <div class="header__logo">
         <img src="./img/Logo.svg" alt="">
@@ -26,20 +49,50 @@
           <li class="header-menu__item"><a href="/#!">Blog</a></li>
         </ul>
       </nav>
-      <div class="header__account">Account</div>
-    </div>
-  </header>
+      <nav class="header-menu">
+        <ul class="header-menu__list">
+          <li class="header-menu__item">
+            <a href="/#!">
+            <img class="header__account-img" src="./img/cart.svg" alt="">
+            Account</a></li>
+        </ul>
+      </nav>
+      <div class="header__account">
+        <a href="/#!" class="main__link">
+          <img class="header__account-img" src="./img/cart.svg" alt="">
+          <span></span>  Account
+        </a>
+        </div> -->
+  <!-- </div>
+  </header>  -->
   <main>
-    <div class="header__background">
-      <img class="header__background-img" src="./img/mntn.jpg" alt="">
-    </div>
-    <div class="guide">
+    <div class="header__background"></div>
+    <section class="main">
+      <div class="main__social">
+        <div class="socia__title">follow us</div>
+        <div class="social__icon">
+          <a class="social__icon-link" href="/#!"><img class="social__icon-img" src="./img/inst.svg" alt=""></a>
+          <a class="social__icon-link" href="/#!"><img class="social__icon-img" src="./img/tw.svg" alt=""></a>
+        </div>
+      </div>
+      <div class="main__wrap">
+        <div class="main__subtitle">A Hiking guide</div>
+        <h1 class="main__title">Be prepared for the Mountains and beyond!</h1>
+        <button class="button main__button">
+          <a href="#guide" class="main__link">scroll down
+            <img class="main__link-img" src="./img/arrow.svg" alt="">
+          </a>
+        </button>
+      </div>
+    </section>
+
+    <section class="guide">
       <div class="container">
-        <div class="guide__item">
-          <div class="guide__text-wrap">
+        <div id="guide" class="guide__item">
+          <div class="guide__text-wrap guide__text-wrap_left">
             <div class="guide__text">
               <div class="guide__subtitle">get started</div>
-              <h2 class="guide__title">What level of hiker are you?</h2>
+              <h2 class="guide__title guide__title_1">What level of hiker are you?</h2>
               <p class="guide__descr">Determining what level of hiker you are can be an important tool when planning
                 future hikes. This hiking level guide will help you plan hikes according to different hike ratings set
                 by
@@ -61,10 +114,10 @@
         </div>
 
         <div class="guide__item">
-          <div class="guide__text-wrap order">
+          <div class="guide__text-wrap guide__text-wrap_right">
             <div class="guide__text">
               <div class="guide__subtitle">hiking essentials</div>
-              <h2 class="guide__title">Picking the right Hiking Gear!</h2>
+              <h2 class="guide__title guide__title_2">Picking the right Hiking Gear!</h2>
               <p class="guide__descr">The nice thing about beginning hiking is that you don’t really need any special
                 gear, you can probably get away with things you already have. Let’s start with clothing. A typical
                 mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif
@@ -84,10 +137,10 @@
         </div>
 
         <div class="guide__item">
-          <div class="guide__text-wrap">
+          <div class="guide__text-wrap guide__text-wrap_left">
             <div class="guide__text">
               <div class="guide__subtitle">where you go is the key</div>
-              <h2 class="guide__title">Understand Your Map & Timing</h2>
+              <h2 class="guide__title guide__title_3">Understand Your Map & Timing</h2>
               <p class="guide__descr">To start, print out the hiking guide and map. If it’s raining, throw them in a
                 Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know
                 what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I
@@ -106,12 +159,49 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
   </main>
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <div class="footer__info">
+          <div class="footer__info-wrap">
+            <div class="footer__logo"><img src="./img/Logo.svg" alt=""></div>
+            <div class="footer__text">Get out there & discover your next slope, mountain & destination!</div>
+          </div>
+          <div class="footer__copy">Copyright 2019 MNTN, Inc. Terms & Privacy</div>
+        </div>
+        <div class="footer-menu__wrap">
+          <nav class="footer-menu">
+            <ul class="footer-menu__list">
+              <span class="footer-menu__title">More on The Blog</span>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/#!">About MNTN</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/#!">Contributors & Writers</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/#!">Write for us</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/#!">contact us</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/#!">Privacy Policy</a></li>
+            </ul>
+            <ul class="footer-menu__list">
+              <span class="footer-menu__title">More on MNTN</span>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/#!">the team</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/#!">jobs</a></li>
+              <li class="footer-menu__item"><a class="footer-menu__link" href="/#!">press</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="footer__copy_min">Copyright 2019 MNTN, Inc. Terms & Privacy</div>
+      </div>
+    </div>
+  </footer>
 
 
 
-
+  <script>// open mobile menu
+    $('.js-toggle-menu').click(function (e) {
+      e.preventDefault();
+      $('.header-menu__list').slideToggle();
+      $(this).toggleClass('open');
+    });</script>
   <!-- <script src="js/libs.min.js"></script> -->
   <!-- <script src="js/main.js"></script> -->
   <!-- <script src="/slick/slick.min.js"></script> -->
